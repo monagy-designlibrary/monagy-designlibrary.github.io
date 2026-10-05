@@ -1268,7 +1268,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #e8bb53;outline-offset:3p
 .brand-nav-actions{grid-column:1/-1;grid-row:3}
 .brand-nav-actions a,.brand-nav-actions .nav-folders{min-height:35px}
 }
-</style></head>
+</style><style id="library-section-navigation">.library-section-nav{display:flex;justify-content:center;gap:8px;padding:8px 12px;background:#0b1a25;border-top:1px solid #d4ac4e44;border-bottom:1px solid #d4ac4e44;flex-shrink:0;direction:rtl}.library-section-nav a{display:flex;align-items:center;justify-content:center;gap:9px;flex:1;max-width:230px;min-height:44px;padding:7px 12px;color:#e8edf2;border:1px solid #334b5b;border-radius:9px;text-decoration:none;font:600 14px Cairo,Arial,sans-serif;background:#122b3b}.library-section-nav a:hover,.library-section-nav a[aria-current="page"]{background:#edc65e;color:#102333;border-color:#edc65e}.library-section-nav small{font:12px Arial,sans-serif;opacity:.85}.library-section-nav i{font-size:18px}@media(max-width:600px){.library-section-nav{gap:5px;padding:6px}.library-section-nav a{flex-direction:column;gap:2px;font-size:12px;padding:6px 3px;min-width:0}.library-section-nav i{display:none}.library-section-nav small{font-size:10px}}</style>
+</head>
         <body>
             
             
@@ -1315,9 +1316,10 @@ a:focus-visible,button:focus-visible{outline:3px solid #e8bb53;outline-offset:3p
                     </a>
                 </div>
             </div>
-            <div class="main-container">
+            <nav class="library-section-nav" aria-label="أقسام المكتبة / Library sections"><a href="./" aria-current="page"><i class="fas fa-palette" aria-hidden="true"></i><span>التصميمات</span><small lang="en">Designs</small></a><a href="courses-premium-full/index.html" target="mainFrame" onclick="openLibrarySection(this)"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>الكورسات</span><small lang="en">Courses</small></a><a href="designlibrary-marketing-full/index.html" target="mainFrame" onclick="openLibrarySection(this)"><i class="fas fa-bullhorn" aria-hidden="true"></i><span>التسويق</span><small lang="en">Marketing</small></a><a href="designlibrary-pro-full/index.html" target="mainFrame" onclick="openLibrarySection(this)"><i class="fas fa-laptop-code" aria-hidden="true"></i><span>البرامج</span><small lang="en">Software</small></a></nav><script>function openLibrarySection(link){document.querySelectorAll('.library-section-nav a').forEach(function(a){a.removeAttribute('aria-current')});link.setAttribute('aria-current','page');document.getElementById('sidebar').classList.add('hidden');sidebarHidden=true;document.getElementById('loadingOverlay').style.display='flex';document.getElementById('mainFrame').title=link.textContent.trim();}</script>
+<div class="main-container">
                 <div class="content-area">
-                    <iframe id="mainFrame" title="Library resources / موارد المكتبة"></iframe>
+                    <iframe name="mainFrame" id="mainFrame" title="Library resources / موارد المكتبة"></iframe>
                     <div id="loadingOverlay">من فضلك انتظر جاري ظهور المحتويات</div>
                 </div>
                 <div class="sidebar" id="sidebar">
